@@ -6,3 +6,4 @@ The ultimate goal is to create pipeline such that we can feed in some list of do
 
 - [massbanner.sh](massbanner.sh) - Specify file with list of URLs and get the server running
 - [setup-pendata.sh](setup-pendata.sh) - Clone popular and useful files and payloads without needing to go to each source
+- [setup-sys.sh](setup-sys.sh) - Setups the base system to get into hacking/programming mode
