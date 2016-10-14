@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # runs set of setup commands to customize the system
+# default directory for custom tools is $HOME/pentest/tools
+# which you can override by passing the directory you want as 2nd argument
+
+TOOLS_ROOT_DIR=${1:$HOME/pentest/tools}
 
 is_debian() {
     [[ -f "/usr/bin/apt-get" ]]
@@ -34,9 +38,16 @@ elif is_rhel; then
   yum update
   yum install -y the_silver_searcher
 else
-  echo "Unsupported distro"
+  echo "Unsupported distro but will continue installing other packages"
 fi
 
 pip install percol # https://github.com/mooz/percol
 pip install thefuck # https://github.com/nvbn/thefuck
 echo 'eval "$(thefuck --alias)"' >> ~/.bashrc
+
+echo "Installing custom "
+if [[ ! -e "${TOOLS_ROOT_DIR}" ]]; then
+  mkdir -p "${TOOLS_ROOT_DIR}"
+fi
+git clone https://github.com/nepalihackers/apk2gold-reloaded.git "${TOOLS_ROOT_DIR}/apk2gold"
+echo "export PATH=$PATH:${TOOLS_ROOT_DIR}/apk2gold" >> ~/.bashrc
