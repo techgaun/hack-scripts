@@ -13,7 +13,7 @@ if [[ ! -e "${ROOT_DIR}" ]]; then
 fi
 mkdir -p "${PAYLOAD_DIR}"
 
-# git clone https://github.com/danielmiessler/SecLists.git "${ROOT_DIR}/seclist"
+git clone https://github.com/danielmiessler/SecLists.git "${ROOT_DIR}/seclist"
 git clone https://github.com/nepalihackers/xss-payloads.git "${PAYLOAD_DIR}/xss"
 git clone https://github.com/xsuperbug/payloads.git "${PAYLOAD_DIR}/badfiles"
 git clone https://github.com/minimaxir/big-list-of-naughty-strings.git "${PAYLOAD_DIR}/badstrings"
