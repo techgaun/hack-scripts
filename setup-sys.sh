@@ -49,5 +49,14 @@ echo "Installing custom "
 if [[ ! -e "${TOOLS_ROOT_DIR}" ]]; then
   mkdir -p "${TOOLS_ROOT_DIR}"
 fi
+
 git clone https://github.com/nepalihackers/apk2gold-reloaded.git "${TOOLS_ROOT_DIR}/apk2gold"
 echo "export PATH=$PATH:${TOOLS_ROOT_DIR}/apk2gold" >> ~/.bashrc
+
+git clone https://github.com/xmendez/wfuzz.git "${TOOLS_ROOT_DIR}/wfuzz"
+
+git clone https://github.com/1N3/Sn1per.git "${TOOLS_ROOT_DIR}/sniper"
+(cd "${TOOLS_ROOT_DIR}/sniper" && bash install.sh)
+
+git clone https://github.com/techgaun/github-dorks.git "${TOOLS_ROOT_DIR}/github-dorks"
+(cd "${TOOLS_ROOT_DIR}/github-dorks" && pip install -r requirements.txt)
