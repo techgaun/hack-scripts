@@ -33,7 +33,7 @@ is_root || error "Please run this script as a root user"
 
 if is_debian; then
   apt update
-  apt install -y silversearcher-ag
+  apt install -y silversearcher-ag axel
 elif is_rhel; then
   yum update
   yum install -y the_silver_searcher
