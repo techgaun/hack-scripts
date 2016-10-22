@@ -33,10 +33,12 @@ is_root || error "Please run this script as a root user"
 
 if is_debian; then
   apt update
+  # forensics-all metapackage installs most of the forensic tools ranging from extundelete to yara
+  # you can see all details by typing: apt-cache show forensics-all
   apt install -y build-essential git vim silversearcher-ag axel aircrack-ng pyrit reaver wifite zenmap thc-ipv6 \
     nbtscan wireshark-qt tshark tcpdump vlan yersinia ettercap-text-only dsniff arp-scan ghex shutter whois \
     lft gnupg medusa hydra hydra-gtk libstrongswan p7zip-full forensics-all steghide dmitry ophcrack nginx-full \
-    socat swftools ruby-dev libpcap-dev
+    socat swftools ruby-dev libpcap-dev php7.0-cli php7.0-fpm
 elif is_rhel; then
   yum update
   yum groupinstall -y "Development Tools"
@@ -68,3 +70,5 @@ git clone https://github.com/1N3/Sn1per.git "${TOOLS_ROOT_DIR}/sniper"
 
 git clone https://github.com/techgaun/github-dorks.git "${TOOLS_ROOT_DIR}/github-dorks"
 (cd "${TOOLS_ROOT_DIR}/github-dorks" && pip install -r requirements.txt)
+
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
