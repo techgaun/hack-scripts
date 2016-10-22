@@ -33,13 +33,21 @@ is_root || error "Please run this script as a root user"
 
 if is_debian; then
   apt update
-  apt install -y silversearcher-ag axel
+  apt install -y build-essential git vim silversearcher-ag axel aircrack-ng pyrit reaver wifite zenmap thc-ipv6 \
+    nbtscan wireshark-qt tshark tcpdump vlan yersinia ettercap-text-only dsniff arp-scan ghex shutter whois \
+    lft gnupg medusa hydra hydra-gtk libstrongswan p7zip-full forensics-all steghide dmitry ophcrack nginx-full \
+    socat swftools ruby-dev libpcap-dev
 elif is_rhel; then
   yum update
-  yum install -y the_silver_searcher
+  yum groupinstall -y "Development Tools"
+  # todo: add packages just like debian versions
+  yum install -y the_silver_searcher git vim
 else
   echo "Unsupported distro but will continue installing other packages"
 fi
+
+gem install bettercap
+gem install hacker-gems
 
 pip install percol # https://github.com/mooz/percol
 pip install thefuck # https://github.com/nvbn/thefuck
