@@ -38,7 +38,7 @@ if is_debian; then
   apt install -y build-essential git vim silversearcher-ag axel aircrack-ng pyrit reaver wifite zenmap thc-ipv6 \
     nbtscan wireshark-qt tshark tcpdump vlan yersinia ettercap-text-only dsniff arp-scan ghex shutter whois \
     lft gnupg medusa hydra hydra-gtk libstrongswan p7zip-full forensics-all steghide dmitry ophcrack nginx-full \
-    socat swftools ruby-dev libpcap-dev php7.0-cli php7.0-fpm mutt
+    socat swftools ruby-dev libpcap-dev php7.0-cli php7.0-fpm mutt git-email esmtp
 elif is_rhel; then
   yum update
   yum groupinstall -y "Development Tools"
