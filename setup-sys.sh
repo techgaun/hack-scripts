@@ -73,3 +73,5 @@ git clone https://github.com/techgaun/github-dorks.git "${TOOLS_ROOT_DIR}/github
 (cd "${TOOLS_ROOT_DIR}/github-dorks" && pip install -r requirements.txt)
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+
+wget -q -O - https://raw.githubusercontent.com/techgaun/extract/master/extract >> ~/.bashrc
