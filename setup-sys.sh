@@ -75,3 +75,5 @@ git clone https://github.com/techgaun/github-dorks.git "${TOOLS_ROOT_DIR}/github
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
 
 wget -q -O - https://raw.githubusercontent.com/techgaun/extract/master/extract >> ~/.bashrc
+
+wget -O ~/.bash_aliases https://raw.githubusercontent.com/techgaun/bash-aliases/master/.bash_aliases
