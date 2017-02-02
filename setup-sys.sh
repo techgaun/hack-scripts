@@ -56,6 +56,7 @@ gem install hacker-gems
 pip install percol # https://github.com/mooz/percol
 pip install thefuck # https://github.com/nvbn/thefuck
 pip install httpie
+pip install s3cmd
 
 echo 'eval "$(thefuck --alias)"' >> ~/.bashrc
 
