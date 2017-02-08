@@ -32,6 +32,7 @@ msg() {
 is_root || error "Please run this script as a root user"
 
 if is_debian; then
+  sudo add-apt-repository -y ppa:nathan-renniewaldock/flux
   apt update
   # forensics-all metapackage installs most of the forensic tools ranging from extundelete to yara
   # you can see all details by typing: apt-cache show forensics-all
@@ -39,7 +40,7 @@ if is_debian; then
     nbtscan wireshark-qt tshark tcpdump vlan yersinia ettercap-text-only dsniff arp-scan ghex shutter whois \
     lft gnupg medusa hydra hydra-gtk libstrongswan p7zip-full forensics-all steghide dmitry ophcrack nginx-full \
     socat swftools ruby-dev libpcap-dev php7.0-cli php7.0-fpm mutt git-email esmtp sysdig inotify-tools ack-grep \
-    exif exifprobe
+    exif exifprobe fluxgui
 elif is_rhel; then
   yum update
   yum groupinstall -y "Development Tools"
