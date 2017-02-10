@@ -58,6 +58,7 @@ pip install percol # https://github.com/mooz/percol
 pip install thefuck # https://github.com/nvbn/thefuck
 pip install httpie
 pip install s3cmd
+pip install asciinema
 
 echo 'eval "$(thefuck --alias)"' >> ~/.bashrc
 
