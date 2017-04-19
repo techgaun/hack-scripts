@@ -62,6 +62,7 @@ pip install thefuck # https://github.com/nvbn/thefuck
 pip install httpie
 pip install s3cmd
 pip install asciinema
+pip3 install yapf
 
 echo 'eval "$(thefuck --alias)"' >> ~/.bashrc
 
