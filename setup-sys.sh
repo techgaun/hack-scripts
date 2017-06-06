@@ -43,7 +43,7 @@ if is_debian; then
     nbtscan wireshark-qt tshark tcpdump vlan yersinia ettercap-text-only dsniff arp-scan ghex shutter whois \
     lft gnupg medusa hydra hydra-gtk libstrongswan p7zip-full forensics-all steghide dmitry ophcrack nginx-full \
     socat swftools ruby-dev libpcap-dev php7.0-cli php7.0-fpm mutt git-email esmtp sysdig inotify-tools ack-grep \
-    exif exifprobe fluxgui neovim yarn fortune cowsay mpd mpc dstat htop
+    exif exifprobe fluxgui neovim yarn fortune cowsay mpd mpc dstat htop libevent-dev
 elif is_rhel; then
   yum update
   yum groupinstall -y "Development Tools"
@@ -56,6 +56,7 @@ fi
 
 gem install bettercap
 gem install hacker-gems
+gem install tmuxinator
 
 pip install percol # https://github.com/mooz/percol
 pip install thefuck # https://github.com/nvbn/thefuck
@@ -96,5 +97,13 @@ git clone https://github.com/facebook/watchman.git
 cd watchman
 git checkout v4.7.0
 ./autogen.sh
+./configure
+make && make install
+
+
+cd /tmp
+git clone https://github.com/tmux/tmux.git
+cd tmux
+git checkout 2.5
 ./configure
 make && make install
