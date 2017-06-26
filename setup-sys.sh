@@ -107,3 +107,5 @@ cd tmux
 git checkout 2.5
 ./configure
 make && make install
+
+apt -y autoremove
