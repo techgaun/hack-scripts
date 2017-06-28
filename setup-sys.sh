@@ -108,4 +108,11 @@ git checkout 2.5
 ./configure
 make && make install
 
+cd /tmp
+hg clone https://bitbucket.org/eradman/entr
+cd entr
+./configure
+make test
+make install
+
 apt -y autoremove
