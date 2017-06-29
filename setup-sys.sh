@@ -65,6 +65,8 @@ pip install s3cmd
 pip install asciinema
 pip3 install yapf
 pip install glances
+pip3 install powerline-status
+powerline-config tmux setup
 
 echo 'eval "$(thefuck --alias)"' >> ~/.bashrc
 
