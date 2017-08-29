@@ -35,7 +35,9 @@ if is_debian; then
   sudo add-apt-repository -y ppa:nathan-renniewaldock/flux
   sudo add-apt-repository -y ppa:neovim-ppa/stable
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  curl https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  echo "deb http://www.apache.org/dist/cassandra/debian 311x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
   apt update
   # forensics-all metapackage installs most of the forensic tools ranging from extundelete to yara
   # you can see all details by typing: apt-cache show forensics-all
