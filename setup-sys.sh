@@ -128,3 +128,5 @@ cd ctags
 make && make install
 
 apt -y autoremove
+
+bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
