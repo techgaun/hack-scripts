@@ -130,3 +130,6 @@ make && make install
 apt -y autoremove
 
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+
+go get -u github.com/golang/dep/cmd/dep
+curl -sL cli.openfaas.com | sudo sh
