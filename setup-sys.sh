@@ -133,3 +133,11 @@ bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/bins
 
 go get -u github.com/golang/dep/cmd/dep
 curl -sL cli.openfaas.com | sudo sh
+
+cd /tmp
+wget 'https://github.com/BurntSushi/ripgrep/releases/download/0.7.1/ripgrep-0.7.1-x86_64-unknown-linux-musl.tar.gz'
+tar xfz ripgrep-0.7.1-x86_64-unknown-linux-musl.tar.gz
+cd ripgrep-0.7.1-x86_64-unknown-linux-musl/
+sudo cp rg /usr/bin/rg
+sudo cp complete/rg.bash-completion /etc/bash_completion.d/
+sudo cp rg.1.gz /usr/share/man/man1/
