@@ -141,3 +141,5 @@ cd ripgrep-0.7.1-x86_64-unknown-linux-musl/
 sudo cp rg /usr/bin/rg
 sudo cp complete/rg.bash-completion /etc/bash_completion.d/
 sudo cp rg.1.gz /usr/share/man/man1/
+
+curl https://beyondgrep.com/ack-2.18-single-file > ~/.bin/ack && chmod 0755 ~/.bin/ack
