@@ -143,3 +143,8 @@ sudo cp complete/rg.bash-completion /etc/bash_completion.d/
 sudo cp rg.1.gz /usr/share/man/man1/
 
 curl https://beyondgrep.com/ack-2.18-single-file > ~/.bin/ack && chmod 0755 ~/.bin/ack
+
+GENYMOTION_VERSION="2.11.0"
+wget "https://dl.genymotion.com/releases/genymotion-${GENYMOTION_VERSION}/genymotion-${GENYMOTION_VERSION}-linux_x64.bin" -O /tmp/genymotion.bin
+chmod +x /tmp/genymotion.bin
+/tmp/genymotion.bin -d "${HOME}/"
