@@ -46,7 +46,7 @@ if is_debian; then
     lft gnupg medusa hydra hydra-gtk libstrongswan p7zip-full forensics-all steghide dmitry ophcrack nginx-full \
     socat swftools ruby-dev libpcap-dev php7.0-cli php7.0-fpm mutt git-email esmtp sysdig inotify-tools \
     exif exifprobe fluxgui neovim yarn fortune cowsay mpd mpc dstat htop libevent-dev clang-4.0 global \
-    python-pygments cassandra bison aspell aspell-en
+    python-pygments cassandra bison aspell aspell-en tig
 elif is_rhel; then
   yum update
   yum groupinstall -y "Development Tools"
