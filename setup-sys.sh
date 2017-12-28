@@ -148,3 +148,5 @@ GENYMOTION_VERSION="2.11.0"
 wget "https://dl.genymotion.com/releases/genymotion-${GENYMOTION_VERSION}/genymotion-${GENYMOTION_VERSION}-linux_x64.bin" -O /tmp/genymotion.bin
 chmod +x /tmp/genymotion.bin
 /tmp/genymotion.bin -d "${HOME}/"
+
+curl -sSL https://get.haskellstack.org/ | sh
