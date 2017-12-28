@@ -150,3 +150,5 @@ chmod +x /tmp/genymotion.bin
 /tmp/genymotion.bin -d "${HOME}/"
 
 curl -sSL https://get.haskellstack.org/ | sh
+stack update
+stack install unused
