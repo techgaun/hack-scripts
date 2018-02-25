@@ -60,6 +60,7 @@ fi
 gem install bettercap
 gem install hacker-gems
 gem install tmuxinator
+gem install neovim
 
 pip install percol # https://github.com/mooz/percol
 pip install thefuck # https://github.com/nvbn/thefuck
