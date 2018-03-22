@@ -96,7 +96,8 @@ wget -q -O - https://raw.githubusercontent.com/techgaun/extract/master/extract >
 
 wget -O ~/.bash_aliases https://raw.githubusercontent.com/techgaun/bash-aliases/master/.bash_aliases
 
-npm i -g diff-so-fancy apidoc flow-bin git+https://github.com/ramitos/jsctags.git castnow
+npm i -g diff-so-fancy apidoc flow-bin git+https://github.com/ramitos/jsctags.git castnow \
+  serverless
 
 cd /tmp
 git clone https://github.com/facebook/watchman.git
