@@ -1,0 +1,11 @@
+[Unit]
+Description=Fix BT Speaker
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/fix-bt.py
+
+[Install]
+WantedBy=multi-user.target
+
