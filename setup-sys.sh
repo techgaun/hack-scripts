@@ -156,3 +156,5 @@ chmod +x /tmp/genymotion.bin
 curl -sSL https://get.haskellstack.org/ | sh
 stack update
 stack install unused
+
+modprobe msr
