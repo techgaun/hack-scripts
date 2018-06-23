@@ -72,6 +72,7 @@ pip install asciinema
 pip3 install yapf
 pip3 install clang
 pip install glances
+pip install ansible
 pip3 install powerline-status
 powerline-config tmux setup
 
