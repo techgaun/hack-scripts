@@ -48,7 +48,7 @@ if is_debian; then
     exif exifprobe fluxgui neovim yarn fortune cowsay mpd mpc dstat htop libevent-dev clang-4.0 global \
     python-pygments cassandra bison aspell aspell-en tig msr-tools gphoto2 gtkam \
     avr-libc avrdude binutils-avr gcc-avr srecord gdb-avr simulavr \
-    pv ncdu moreutils
+    pv ncdu moreutils pgbadger
 elif is_rhel; then
   yum update
   yum groupinstall -y "Development Tools"
