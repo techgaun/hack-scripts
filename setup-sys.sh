@@ -34,6 +34,7 @@ is_root || error "Please run this script as a root user"
 if is_debian; then
   sudo add-apt-repository -y ppa:nathan-renniewaldock/flux
   sudo add-apt-repository -y ppa:neovim-ppa/stable
+  sudo add-apt-repository -y ppa:hadret/fswatch
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   curl https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
@@ -48,7 +49,7 @@ if is_debian; then
     exif exifprobe fluxgui neovim yarn fortune cowsay mpd mpc dstat htop libevent-dev clang-4.0 global \
     python-pygments cassandra bison aspell aspell-en tig msr-tools gphoto2 gtkam \
     avr-libc avrdude binutils-avr gcc-avr srecord gdb-avr simulavr \
-    pv ncdu moreutils pgbadger csvtool
+    pv ncdu moreutils pgbadger csvtool fswatch
 elif is_rhel; then
   yum update
   yum groupinstall -y "Development Tools"
