@@ -50,6 +50,9 @@ if is_debian; then
     python-pygments cassandra bison aspell aspell-en tig msr-tools gphoto2 gtkam \
     avr-libc avrdude binutils-avr gcc-avr srecord gdb-avr simulavr \
     pv ncdu moreutils pgbadger csvtool fswatch
+
+  wget 'https://github.com/sharkdp/bat/releases/download/v0.7.1/bat_0.7.1_amd64.deb' -O /tmp/bat.deb && dpkg -i \
+    /tmp/bat.deb && rm -f /tmp/bat.deb
 elif is_rhel; then
   yum update
   yum groupinstall -y "Development Tools"
