@@ -35,6 +35,7 @@ if is_debian; then
   sudo add-apt-repository -y ppa:nathan-renniewaldock/flux
   sudo add-apt-repository -y ppa:neovim-ppa/stable
   sudo add-apt-repository -y ppa:hadret/fswatch
+  sudo add-apt-repository -y ppa:twodopeshaggy/jarun
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   curl https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
@@ -48,8 +49,8 @@ if is_debian; then
     socat swftools ruby-dev libpcap-dev php7.0-cli php7.0-fpm mutt git-email esmtp sysdig inotify-tools \
     exif exifprobe fluxgui neovim yarn fortune cowsay mpd mpc dstat htop libevent-dev clang-4.0 global \
     python-pygments cassandra bison aspell aspell-en tig msr-tools gphoto2 gtkam \
-    avr-libc avrdude binutils-avr gcc-avr srecord gdb-avr simulavr \
-    pv ncdu moreutils pgbadger csvtool fswatch xmonad devilspie mkchromecast
+    avr-libc avrdude binutils-avr gcc-avr srecord gdb-avr simulavr pkg-config libncursesw5-dev \
+    pv ncdu moreutils pgbadger csvtool fswatch xmonad devilspie mkchromecast nnn
 
   wget 'https://github.com/sharkdp/bat/releases/download/v0.7.1/bat_0.7.1_amd64.deb' -O /tmp/bat.deb && dpkg -i \
     /tmp/bat.deb && rm -f /tmp/bat.deb
