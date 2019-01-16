@@ -165,3 +165,7 @@ stack update
 stack install unused
 
 modprobe msr
+
+# heroku stuff
+# commenting out until get it automated to install heroku cli as well
+# heroku plugins:install heroku-pg-extras
