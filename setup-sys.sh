@@ -79,6 +79,7 @@ pip3 install clang
 pip install glances
 pip install ansible
 pip3 install powerline-status
+pip3 install git+https://github.com/jeffkaufman/icdiff.git
 powerline-config tmux setup
 
 echo 'eval "$(thefuck --alias)"' >> ~/.bashrc
