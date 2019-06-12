@@ -69,6 +69,7 @@ gem install hacker-gems
 gem install tmuxinator
 gem install neovim
 
+pip install --user git+https://github.com/awslabs/aws-shell.git
 pip install percol # https://github.com/mooz/percol
 pip install thefuck # https://github.com/nvbn/thefuck
 pip install httpie
