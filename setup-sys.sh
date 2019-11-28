@@ -32,14 +32,15 @@ msg() {
 is_root || error "Please run this script as a root user"
 
 if is_debian; then
-  sudo add-apt-repository -y ppa:nathan-renniewaldock/flux
-  sudo add-apt-repository -y ppa:neovim-ppa/stable
-  sudo add-apt-repository -y ppa:hadret/fswatch
-  sudo add-apt-repository -y ppa:twodopeshaggy/jarun
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  curl https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  echo "deb http://www.apache.org/dist/cassandra/debian 311x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
+  apt install -y build-essential git curl
+  add-apt-repository -y ppa:nathan-renniewaldock/flux
+  add-apt-repository -y ppa:neovim-ppa/stable
+  add-apt-repository -y ppa:hadret/fswatch
+  add-apt-repository -y ppa:twodopeshaggy/jarun
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+  curl https://www.apache.org/dist/cassandra/KEYS | apt-key add -
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+  echo "deb http://www.apache.org/dist/cassandra/debian 311x main" | tee -a /etc/apt/sources.list.d/cassandra.sources.list
   apt update
   # forensics-all metapackage installs most of the forensic tools ranging from extundelete to yara
   # you can see all details by typing: apt-cache show forensics-all
@@ -145,7 +146,7 @@ apt -y autoremove
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 
 go get -u github.com/golang/dep/cmd/dep
-curl -sL cli.openfaas.com | sudo sh
+curl -sL cli.openfaas.com | sh
 
 cd /tmp
 wget 'https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb' -O /tmp/rg.deb \
