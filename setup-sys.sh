@@ -50,7 +50,7 @@ if is_debian; then
     exif exifprobe fluxgui neovim yarn fortune cowsay mpd mpc dstat htop libevent-dev clang-4.0 global \
     python-pygments cassandra bison aspell aspell-en tig msr-tools gphoto2 gtkam \
     avr-libc avrdude binutils-avr gcc-avr srecord gdb-avr simulavr pkg-config libncursesw5-dev \
-    pv ncdu moreutils pgbadger csvtool fswatch xmonad devilspie mkchromecast nnn cpulimit
+    pv ncdu moreutils pgbadger csvtool fswatch xmonad devilspie mkchromecast nnn cpulimit curl mercurial
 
   wget 'https://github.com/sharkdp/bat/releases/download/v0.12.1/bat_0.12.1_amd64.deb' -O /tmp/bat.deb && dpkg -i \
     /tmp/bat.deb && rm -f /tmp/bat.deb
@@ -101,7 +101,7 @@ git clone https://github.com/1N3/Sn1per.git "${TOOLS_ROOT_DIR}/sniper"
 git clone https://github.com/techgaun/github-dorks.git "${TOOLS_ROOT_DIR}/github-dorks"
 (cd "${TOOLS_ROOT_DIR}/github-dorks" && pip install -r requirements.txt)
 
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 
 wget -q -O - https://raw.githubusercontent.com/techgaun/extract/master/extract >> ~/.bashrc
 
@@ -113,7 +113,7 @@ npm i -g diff-so-fancy apidoc flow-bin git+https://github.com/ramitos/jsctags.gi
 cd /tmp
 git clone https://github.com/facebook/watchman.git
 cd watchman
-git checkout v4.7.0
+git checkout v4.9.0
 ./autogen.sh
 ./configure
 make && make install
@@ -122,7 +122,7 @@ make && make install
 cd /tmp
 git clone https://github.com/tmux/tmux.git
 cd tmux
-git checkout 2.5
+git checkout 3.0
 ./configure
 make && make install
 
@@ -148,16 +148,12 @@ go get -u github.com/golang/dep/cmd/dep
 curl -sL cli.openfaas.com | sudo sh
 
 cd /tmp
-wget 'https://github.com/BurntSushi/ripgrep/releases/download/0.7.1/ripgrep-0.7.1-x86_64-unknown-linux-musl.tar.gz'
-tar xfz ripgrep-0.7.1-x86_64-unknown-linux-musl.tar.gz
-cd ripgrep-0.7.1-x86_64-unknown-linux-musl/
-sudo cp rg /usr/bin/rg
-sudo cp complete/rg.bash-completion /etc/bash_completion.d/
-sudo cp rg.1.gz /usr/share/man/man1/
+wget 'https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb' -O /tmp/rg.deb \
+  && dpkg -i /tmp/rg.deb && rm -f /tmp/rg.deb
 
-curl https://beyondgrep.com/ack-2.18-single-file > ~/.bin/ack && chmod 0755 ~/.bin/ack
+curl https://beyondgrep.com/ack-v3.2.0 > ~/bin/ack && chmod 0755 ~/bin/ack
 
-GENYMOTION_VERSION="2.11.0"
+GENYMOTION_VERSION="3.0.3"
 wget "https://dl.genymotion.com/releases/genymotion-${GENYMOTION_VERSION}/genymotion-${GENYMOTION_VERSION}-linux_x64.bin" -O /tmp/genymotion.bin
 chmod +x /tmp/genymotion.bin
 /tmp/genymotion.bin -d "${HOME}/"
