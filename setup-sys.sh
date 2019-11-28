@@ -47,7 +47,7 @@ if is_debian; then
   apt install -y build-essential git vim silversearcher-ag axel aircrack-ng pyrit reaver wifite zenmap thc-ipv6 \
     nbtscan wireshark-qt tshark tcpdump vlan yersinia ettercap-text-only dsniff arp-scan ghex shutter whois \
     lft gnupg medusa hydra hydra-gtk libstrongswan p7zip-full forensics-all steghide dmitry ophcrack nginx-full \
-    socat swftools ruby-dev libpcap-dev php7.0-cli php7.0-fpm mutt git-email esmtp sysdig inotify-tools \
+    socat swftools ruby-dev libpcap-dev php7.2-cli php7.2-fpm mutt git-email esmtp sysdig inotify-tools \
     exif exifprobe fluxgui neovim yarn fortune cowsay mpd mpc dstat htop libevent-dev clang-4.0 global \
     python-pygments cassandra bison aspell aspell-en tig msr-tools gphoto2 gtkam \
     avr-libc avrdude binutils-avr gcc-avr srecord gdb-avr simulavr pkg-config libncursesw5-dev \
