@@ -90,7 +90,7 @@ if [[ ! -e "${TOOLS_ROOT_DIR}" ]]; then
   mkdir -p "${TOOLS_ROOT_DIR}"
 fi
 
-git clone https://github.com/nepalihackers/apk2gold-reloaded.git "${TOOLS_ROOT_DIR}/apk2gold"
+git clone https://github.com/techgaun/apk2gold-reloaded.git "${TOOLS_ROOT_DIR}/apk2gold"
 echo "export PATH=$PATH:${TOOLS_ROOT_DIR}/apk2gold" >> ~/.bashrc
 
 git clone https://github.com/xmendez/wfuzz.git "${TOOLS_ROOT_DIR}/wfuzz"
