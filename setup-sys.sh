@@ -124,6 +124,7 @@ cd /tmp
 git clone https://github.com/tmux/tmux.git
 cd tmux
 git checkout 3.0
+./autogen.sh
 ./configure
 make && make install
 
