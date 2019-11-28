@@ -32,7 +32,7 @@ msg() {
 is_root || error "Please run this script as a root user"
 
 if is_debian; then
-  apt install -y build-essential git curl
+  apt install -y build-essential git curl automake
   add-apt-repository -y ppa:nathan-renniewaldock/flux
   add-apt-repository -y ppa:neovim-ppa/stable
   add-apt-repository -y ppa:hadret/fswatch
