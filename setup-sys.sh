@@ -51,7 +51,8 @@ if is_debian; then
     exif exifprobe fluxgui neovim yarn fortune-mod cowsay mpd mpc dstat htop libevent-dev clang-4.0 global \
     python-pygments cassandra bison aspell aspell-en tig msr-tools gphoto2 gtkam \
     avr-libc avrdude binutils-avr gcc-avr srecord gdb-avr simulavr pkg-config libncursesw5-dev \
-    pv ncdu moreutils pgbadger csvtool fswatch xmonad devilspie mkchromecast nnn cpulimit curl mercurial
+    pv ncdu moreutils pgbadger csvtool fswatch xmonad devilspie mkchromecast nnn cpulimit curl mercurial \
+    chrome-gnome-shell bless unison unison-gtk
 
   wget 'https://github.com/sharkdp/bat/releases/download/v0.12.1/bat_0.12.1_amd64.deb' -O /tmp/bat.deb && dpkg -i \
     /tmp/bat.deb && rm -f /tmp/bat.deb
@@ -171,3 +172,5 @@ modprobe msr
 # heroku plugins:install heroku-pg-extras
 
 curl -L https://bit.ly/glances | /bin/bash
+
+wget 'https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64' -O /usr/local/bin/jq && chmod +x /usr/local/bin/jq
