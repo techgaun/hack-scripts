@@ -156,7 +156,7 @@ wget 'https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.
 
 curl https://beyondgrep.com/ack-v3.2.0 > ~/bin/ack && chmod 0755 ~/bin/ack
 
-GENYMOTION_VERSION="3.0.3"
+GENYMOTION_VERSION="3.0.4"
 wget "https://dl.genymotion.com/releases/genymotion-${GENYMOTION_VERSION}/genymotion-${GENYMOTION_VERSION}-linux_x64.bin" -O /tmp/genymotion.bin
 chmod +x /tmp/genymotion.bin
 /tmp/genymotion.bin -d "${HOME}/"
