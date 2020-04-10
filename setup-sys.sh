@@ -52,7 +52,7 @@ if is_debian; then
     python-pygments cassandra bison aspell aspell-en tig msr-tools gphoto2 gtkam \
     avr-libc avrdude binutils-avr gcc-avr srecord gdb-avr simulavr pkg-config libncursesw5-dev \
     pv ncdu moreutils pgbadger csvtool fswatch xmonad devilspie mkchromecast nnn cpulimit curl mercurial \
-    chrome-gnome-shell bless unison unison-gtk
+    chrome-gnome-shell bless unison unison-gtk xsel
 
   wget 'https://github.com/sharkdp/bat/releases/download/v0.12.1/bat_0.12.1_amd64.deb' -O /tmp/bat.deb && dpkg -i \
     /tmp/bat.deb && rm -f /tmp/bat.deb
