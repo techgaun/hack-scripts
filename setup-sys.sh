@@ -37,6 +37,7 @@ if is_debian; then
   add-apt-repository -y ppa:neovim-ppa/stable
   add-apt-repository -y ppa:hadret/fswatch
   add-apt-repository -y ppa:twodopeshaggy/jarun
+  add-apt-repository -y ppa:lazygit-team/release
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
   curl https://www.apache.org/dist/cassandra/KEYS | apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
@@ -52,7 +53,7 @@ if is_debian; then
     python-pygments cassandra bison aspell aspell-en tig msr-tools gphoto2 gtkam \
     avr-libc avrdude binutils-avr gcc-avr srecord gdb-avr simulavr pkg-config libncursesw5-dev \
     pv ncdu moreutils pgbadger csvtool fswatch xmonad devilspie mkchromecast nnn cpulimit curl mercurial \
-    chrome-gnome-shell bless unison unison-gtk xsel lmms
+    chrome-gnome-shell bless unison unison-gtk xsel lmms lazygit
 
   wget 'https://github.com/sharkdp/bat/releases/download/v0.12.1/bat_0.12.1_amd64.deb' -O /tmp/bat.deb && dpkg -i \
     /tmp/bat.deb && rm -f /tmp/bat.deb
@@ -174,3 +175,5 @@ modprobe msr
 curl -L https://bit.ly/glances | /bin/bash
 
 wget 'https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64' -O /usr/local/bin/jq && chmod +x /usr/local/bin/jq
+
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
