@@ -159,7 +159,9 @@ class BluetoothctlProtocol(asyncio.SubprocessProtocol):
 
     def connection_made(self, transport):
         self.transport = transport
-        print('Connection MADE')
+        print('Connection MADE by user')
+    def connection_made (self, transport):
+	pass
 
     async def send_command(self, c):
         stdin_transport = self.transport.get_pipe_transport(0)
