@@ -177,3 +177,5 @@ curl -L https://bit.ly/glances | /bin/bash
 wget 'https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64' -O /usr/local/bin/jq && chmod +x /usr/local/bin/jq
 
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+
+curl -fsSL https://starship.rs/install.sh | bash
