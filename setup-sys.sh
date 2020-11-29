@@ -179,3 +179,6 @@ wget 'https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64' -O /us
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 
 curl -fsSL https://starship.rs/install.sh | bash
+
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin
