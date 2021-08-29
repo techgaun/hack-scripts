@@ -54,7 +54,7 @@ if is_debian; then
     avr-libc avrdude binutils-avr gcc-avr srecord gdb-avr simulavr pkg-config libncursesw5-dev \
     pv ncdu moreutils pgbadger csvtool fswatch xmonad devilspie mkchromecast nnn cpulimit curl mercurial \
     chrome-gnome-shell bless unison unison-gtk xsel lmms lazygit v4l2loopback-utils gphoto2 darktable \
-    xdotool
+    xdotool flameshot
 
   wget 'https://github.com/sharkdp/bat/releases/download/v0.12.1/bat_0.12.1_amd64.deb' -O /tmp/bat.deb && dpkg -i \
     /tmp/bat.deb && rm -f /tmp/bat.deb
